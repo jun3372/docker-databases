@@ -5,7 +5,7 @@ services: docker
 
 script:
   - cp env-example .env
-  - docker-composer up -d
+  - docker-compose up -d
 
 after_script:
   - docker images
