@@ -31,7 +31,7 @@ services:
         image: 'redis:${REDIS_VERSION}'
         ports:
             - "${REDIS_PORT}:6379"
-        # volumes:
+        volumes:
             - ${DATA_PATH_HOST}/redis:/data
         extra_hosts:
             - "dockerhost:${DOCKER_HOST_IP}"
