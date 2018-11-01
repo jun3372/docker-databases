@@ -1,0 +1,14 @@
+composer.lock
+.DS_Store
+Thumbs.db
+/phpunit.xml
+/.idea
+/.vscode
+/.env
+/nginx/logs/*
+/nginx/vhost/*
+/nginx/ssl/*
+/app/*
+/data/mysql/*
+/data/redis/*
+/data/memcached/*

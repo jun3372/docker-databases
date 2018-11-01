@@ -1,0 +1,60 @@
+
+### Paths #################################################
+
+# Choose storage path on your machine. For all storage systems
+DATA_PATH_HOST=./data
+
+
+### Docker Host IP ########################################
+
+# Enter your Docker Host IP (will be appended to /etc/hosts). Default is `10.0.75.1`
+DOCKER_HOST_IP=10.0.75.1
+
+
+### Drivers ################################################
+
+# All volumes driver
+VOLUMES_DRIVER=local
+
+# All Networks driver
+NETWORKS_DRIVER=bridge
+
+
+### MYSQL #################################################
+
+MYSQL_VERSION=5.7
+MYSQL_DATABASE=default
+MYSQL_USER=default
+MYSQL_PASSWORD=secret
+MYSQL_PORT=3306
+MYSQL_ROOT_PASSWORD=root
+MYSQL_ALLOW_EMPTY_PASSWORD=yes
+MYSQL_TIMEZONE=PRC
+MYSQL_DATA_PATH=./data/mysql
+MYSQL_ENTRYPOINT_INITDB=./data/mysql/docker-entrypoint-initdb.d
+
+
+### REDIS #################################################
+
+REDIS_PORT=6379
+REDIS_VERSION=4.0.9-alpine
+
+
+### PHP MY ADMIN ##########################################
+
+# Accepted values: mariadb - mysql
+
+PMA_DB_ENGINE=mysql
+
+# Credentials/Port:
+
+PMA_USER=default
+PMA_PASSWORD=secret
+PMA_ROOT_PASSWORD=root
+PMA_PORT=8080
+
+
+### MEMCACHED #############################################
+
+MEMCACHED_HOST_PORT=11211
+MEMCACHED_VERSION=latest
