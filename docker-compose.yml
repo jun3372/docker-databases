@@ -20,8 +20,8 @@ services:
           - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
           - MYSQL_ALLOW_EMPTY_PASSWORD=${MYSQL_ALLOW_EMPTY_PASSWORD}
         volumes:
-          # - mysql:/var/lib/mysql
-          - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
+          - mysql:/var/lib/mysql
+          # - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
         privileged: true
         restart: always
 
