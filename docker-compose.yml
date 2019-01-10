@@ -8,7 +8,6 @@ services:
         image: 'mysql:${MYSQL_VERSION}'
         ports:
           - "${MYSQL_PORT}:3306"
-          - "${MYSQL_PORT}0:33060"
         extra_hosts:
           - "dockerhost:${DOCKER_HOST_IP}"
         networks:
@@ -20,7 +19,7 @@ services:
           - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
           - MYSQL_ALLOW_EMPTY_PASSWORD=${MYSQL_ALLOW_EMPTY_PASSWORD}
         volumes:
-          - mysql:/var/lib/mysql
+          - ${MYSQL_DATA_PATH}:/var/lib/mysql
           # - ${MYSQL_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
         privileged: true
         restart: always
